@@ -1,0 +1,3 @@
+<button type="button" class="btn btn-outline-info" href="/database/perfil">Perfil</button>
+    <button type="button" class="btn btn-outline-success" href="/database/detenciones">Detenciones </button>
+    <button type="button" class="btn btn-outline-danger" href="/database/">Menu</button>
