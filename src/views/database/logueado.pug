@@ -1,0 +1,14 @@
+doctype
+html(lang='en')
+head
+    include includes/header2.pug
+    link(rel='stylesheet', href='/css/index.css')
+body
+    include includes/navbar2.pug
+    .jumbotron.text-center.bg-transparent
+        h1.display-3 Sand Blue Crew
+        p.lead Autorizado: Si!
+            i.fas.fa-medal
+        button.btn.btn-outline-info(href='/database/perfil') Perfil
+        button.btn.btn-outline-success(href='/database/detenciones') Detenciones 
+        button.btn.btn-outline-danger(href='/database/') Menu

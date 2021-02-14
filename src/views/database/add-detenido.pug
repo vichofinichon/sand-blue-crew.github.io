@@ -1,0 +1,23 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  title Añadir Detenido
+  link(rel='stylesheet', href='/css/styles.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css')
+form.form-box.animated.fadeInUp(action='/database/detenciones/add', method='POST')
+  h1.form-title Añadir Detenido
+  h2.form-subtitle Datos Oficial
+  input(type='text', name="oficial" ,placeholder='Oficial')
+  input(type='text', name="placa", placeholder='Placa')
+  input(type='text', name="rango", placeholder='Rango')
+  input(type='text', name="division", placeholder='Division')
+  input(type='text', name="fecha", placeholder="Fecha")
+  h3.form-subtitle Datos Detenido
+  input(type='text', name="nombre", placeholder="Nombre [Nombre_Apellido]")
+  input(type='text', name="dni", placeholder="Numero DNI")
+  input(type='text', name="informe", placeholder="Informe")
+  input(type='text', name="cargos", placeholder='Cargos')
+  button(type='submit')
+    | Subir Detenido

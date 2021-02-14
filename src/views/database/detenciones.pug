@@ -1,0 +1,13 @@
+doctype
+html(lang='en')
+head
+    include includes/header2.pug
+    link(rel='stylesheet', href='/css/index.css')
+body
+    include includes/navbar2.pug
+    .jumbotron.text-center.bg-transparent
+        h1.display-3 Detenciones 
+    .jumbotron.text-center.bg-transparent
+        form.form-box.animated.fadeInUp(action='/database/detenciones/', method='POST')
+            input(type="text" name="detenido" placeholder="Nombre Detenido")
+            i.fas.fa-search-plus
