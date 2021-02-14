@@ -18,29 +18,33 @@ router.post('/database/login', async(req, res, next) => {
         return res.send('Contraseña Incorrecta!')
 	}
 	const token = jwt.sign({id: user._id}, "SxSxSf42¿¿302", {expiresIn: "1h"});
-    res.status(200).render('../views/database/logueado') //json({auth: true, token});
+    res.status(200).render('../database/logueado') //json({auth: true, token});
 })
 
 router.get('/', (req, res) => {
-    res.render('../views/index.pug')
+    res.render("../index.html")
 });
 
 router.get('/database/login', (req, res) => {
-	res.render('../views/signin.pug')
+	res.render('../signin')
 })
 
 router.get('/database/', (req, res) => {
-	res.render('../views/database/index.pug')
+	res.render('../database/index2.html')
 });
 
 router.get('/database/detenciones/', (req, res) => {
-	res.render('../views/database/detenciones.pug')
+	res.render('../database/detenciones.html')
+});
+
+router.get('/database/perfil/', (req, res) => {
+	res.render('../database/perfil.html')
 });
 
 // Detenciones
 
 router.get('/database/detenciones/add', (req, res) => {
-	res.render('../views/database/add-detenido.pug')
+	res.render('../database/add-detenido.html')
 });
 
 router.post('/database/detenciones/add', (req, res) => {
@@ -106,7 +110,7 @@ router.post('/database/detenciones/', (req, res) => {
 	Detenidos.find({ Detenido: detenido }, (err, data) => {
 		if(err) console.log(err)
 		if(!data) {
-			res.render('../views/errors/NoDetenido.pug')
+			res.render('../errors/NoDetenido')
 		} else {
 			if(data) {
 				res.send(data)
@@ -116,7 +120,7 @@ router.post('/database/detenciones/', (req, res) => {
 })
 
 router.get('*', (req, res) => {
-	res.render(`../views/errors/404.pug`)
+	res.render(`../errors/404`)
 })
 
 module.exports = router;

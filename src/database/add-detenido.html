@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Añadir Detenido</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+<form class="form-box animated fadeInUp" action="/database/detenciones/add" method="POST">
+  <h1 class="form-title">Añadir Detenido</h1>
+  <h2 class="form-subtitle">Datos Oficial</h2>
+  <input type="text" name="oficial" placeholder="Oficial">
+  <input type="text" name="placa" placeholder="Placa">
+  <input type="text" name="rango" placeholder="Rango">
+  <input type="text" name="division" placeholder="Division">
+  <input type="text" name="fecha" placeholder="Fecha">
+  <h3 class="form-subtitle">Datos Detenido</h3>
+  <input type="text" name="nombre" placeholder="Nombre [Nombre_Apellido]">
+  <input type="text" name="dni" placeholder="Numero DNI">
+  <input type="text" name="informe" placeholder="Informe">
+  <input type="text" name="cargos" placeholder="Cargos">
+  <button type="submit">Subir Detenido</button>
+</form>
